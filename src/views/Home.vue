@@ -1,8 +1,13 @@
+
 <template>
-  <div>hello</div>
+  <Suspense>
+    <Nav />
+  </Suspense>
 </template>
 
-<script setup></script>
+<script setup>
+  import Nav from './../components/Nav.vue';
+</script>
 
 <style></style>
 

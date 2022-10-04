@@ -65,3 +65,10 @@ Common
 Lil Supa
 ```
 [Hip Hop Spotify Playlist](https://open.spotify.com/playlist/4vKftyhS1gQovakehVcq1u?si=a7a119382dfe40da)
+
+DÍA UNO:
+Introducción al proyecto, configuraciones en la supabase, task app, etc y además hemos contado con la ayuda de Diego al finalizar la clase para crear y mostrar tareas.
+
+DÍA DOS:
+
+He tenido conflictos para acceder a la app, me ha llevado un rato localizar el problema, hacer simulacros varios para verificar el funcionamiento y, al no poder resolverlo, he recurrido a la ayuda de Aleix para dar con una solución.
