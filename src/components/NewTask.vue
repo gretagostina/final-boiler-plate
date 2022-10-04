@@ -31,8 +31,10 @@ const emit = defineEmits(["childNewTask"]);
 let taskTitle = ref("");
 let taskDesc = ref("");
 let errorBool = ref(false);
+//TODO: Pendiente definir el mensaje final de error.
+let errorMsg = ref("No se ha podido añadir la tarea.")
 const emptyString = ref("");
-function uploadTask() {
+async function uploadTask() {
   if (taskTitle.value === "") {
     errorBool.value = true;
     emptyString.value = "Title is required.";
@@ -40,6 +42,19 @@ function uploadTask() {
       errorBool.value = false;
     }, 1000);
   } else {
+    // CODIGO MIO
+    try {
+      await useTaskStore().addTask(taskTitle.value, taskDesc.value);
+      // if (error) throw error;
+    } catch (error) {
+      errorMsg.value = error.message;
+      setTimeout(() => {
+        errorMsg.value = null;
+      }, 5000);
+    }
+    return;
+
+    // FIN CODIGO MIO
     emit("childNewTask", taskTitle.value, taskDesc.value);
     taskTitle.value = "";
     taskDesc.value = "";

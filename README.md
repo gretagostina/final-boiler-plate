@@ -1,3 +1,18 @@
+DÍA UNO:
+Introducción al proyecto, configuraciones en la supabase, task app, etc y además hemos contado con la ayuda de Diego al finalizar la clase para crear y mostrar tareas.
+
+DÍA DOS:
+
+He tenido conflictos para acceder a la app, me ha llevado un rato localizar el problema, hacer simulacros varios para verificar el funcionamiento y, al no poder resolverlo, he recurrido a la ayuda de Aleix para dar con una solución. Luego de eso he empezado con las rutas y posteriormente he completado la autenticación (sign out).
+He terminado de definir la funcionalidad que añade tareas al supabase, pero todavía no se ve en la web.
+
+PREVISIÓN DÍA TRES:
+·Intentar que se vean las tareas que se van creando en la web.
+·Si me sobra tiempo intentaré hacer la función para eliminar tareas.
+
+
+-------0-------
+
 # final-boiler-plate
 
 This template should help get you started developing the final project running on Vue 3 with the composition API, Pinia as a state management tool, vue router, vite and lastly Supabase running on the backend.
@@ -65,10 +80,3 @@ Common
 Lil Supa
 ```
 [Hip Hop Spotify Playlist](https://open.spotify.com/playlist/4vKftyhS1gQovakehVcq1u?si=a7a119382dfe40da)
-
-DÍA UNO:
-Introducción al proyecto, configuraciones en la supabase, task app, etc y además hemos contado con la ayuda de Diego al finalizar la clase para crear y mostrar tareas.
-
-DÍA DOS:
-
-He tenido conflictos para acceder a la app, me ha llevado un rato localizar el problema, hacer simulacros varios para verificar el funcionamiento y, al no poder resolverlo, he recurrido a la ayuda de Aleix para dar con una solución.
