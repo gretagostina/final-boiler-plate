@@ -1,3 +1,4 @@
+#daily comments
 DÍA UNO:
 Introducción al proyecto, configuraciones en la supabase, task app, etc y además hemos contado con la ayuda de Diego al finalizar la clase para crear y mostrar tareas.
 
@@ -6,10 +7,11 @@ DÍA DOS:
 He tenido conflictos para acceder a la app, me ha llevado un rato localizar el problema, hacer simulacros varios para verificar el funcionamiento y, al no poder resolverlo, he recurrido a la ayuda de Aleix para dar con una solución. Luego de eso he empezado con las rutas y posteriormente he completado la autenticación (sign out).
 He terminado de definir la funcionalidad que añade tareas al supabase, pero todavía no se ve en la web.
 
+```sh
 PREVISIÓN DÍA TRES:
 ·Intentar que se vean las tareas que se van creando en la web.
 ·Si me sobra tiempo intentaré hacer la función para eliminar tareas.
-
+```
 
 -------0-------
 
