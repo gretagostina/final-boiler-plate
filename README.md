@@ -1,4 +1,4 @@
-#daily comments
+# daily comments
 DÍA UNO:
 Introducción al proyecto, configuraciones en la supabase, task app, etc y además hemos contado con la ayuda de Diego al finalizar la clase para crear y mostrar tareas.
 
