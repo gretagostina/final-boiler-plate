@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div id="nav">
     <h1><a href="">📁Task MaNAGER🗃️</a></h1>
     <ul>
-      <li> Welcome Back {{ userFetch.email }}</li>
+      <li>Welcome Back {{ userFetch.email }}</li>
       <form @submit.prevent="signOut">
         <li><button type="submit">Log Out</button></li>
       </form>
@@ -11,18 +11,18 @@
 </template>
 
 <script setup>
-  import { ref, computed } from "vue";
-  import { useRouter } from "vue-router";
-  import { useUserStore } from "../stores/user";
-  // Error Message
-  const errorMsg = ref("");
-  const redirect = useRouter();
-  const userFetch = await useUserStore().fetchUser();
-  const signOut = async () => {
+import { ref, computed } from "vue";
+import { useRouter } from "vue-router";
+import { useUserStore } from "../stores/user";
+// Error Message
+const errorMsg = ref("");
+const redirect = useRouter();
+const userFetch = await useUserStore().fetchUser();
+const signOut = async () => {
   try {
     // calls the user store and send the users info to backend to logIn
     await useUserStore().signOut();
-    // redirects user to the homeView
+    // redirects user to the login
     redirect.push({ path: "/auth/login" });
   } catch (error) {
     // displays error message
@@ -40,4 +40,8 @@
 // async function that calls the signOut method from the useUserStore and pushes the user back to the Auth view.
 </script>
 
-<style></style>
+<style scoped>
+#nav {
+  border: 3px solid yellow;
+}
+</style>

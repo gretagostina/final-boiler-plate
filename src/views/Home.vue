@@ -2,13 +2,14 @@
   <Suspense>
     <Nav />
   </Suspense>
-  <NewTask />
+  <NewTask @childGetTasks="getTasks" />
 
   <TaskItem
     v-for="(miSuperTareaHechaPorGreta, index) in tasks"
     :key="index"
     v-bind:taskData="miSuperTareaHechaPorGreta"
     @childDelete="deleteTask"
+    @childUpdate="updateTask"
   />
   <Footer />
 </template>
@@ -39,6 +40,16 @@ getTasks();
 //Creamos una función async para borrar la tarea
 async function deleteTask(task) {
   await taskStore.deleteTask(task.id);
+  getTasks();
+}
+
+async function updateTask(task) {
+  await taskStore.updateTask(
+    task.id,
+    task.title,
+    task.description,
+    task.is_complete
+  );
   getTasks();
 }
 </script>

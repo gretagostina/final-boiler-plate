@@ -27,13 +27,20 @@
 import { ref } from "vue";
 import { supabase } from "../supabase";
 import { useTaskStore } from "../stores/task.js";
-const emit = defineEmits(["childNewTask"]);
+import { useRouter } from "vue-router";
+const emit = defineEmits(["childNewTask", "childGetTasks"]);
 let taskTitle = ref("");
 let taskDesc = ref("");
 let errorBool = ref(false);
 //TODO: Pendiente definir el mensaje final de error.
-let errorMsg = ref("No se ha podido añadir la tarea.")
+let errorMsg = ref("No se ha podido añadir la tarea.");
 const emptyString = ref("");
+
+function childGetTasks() {
+  emit("childGetTasks");
+}
+
+//Definicion de la tienda de tareas dentro de una variable para utilizar dentro de este archivo de una manera mas limpia.
 async function uploadTask() {
   if (taskTitle.value === "") {
     errorBool.value = true;
@@ -45,6 +52,7 @@ async function uploadTask() {
     // CODIGO MIO
     try {
       await useTaskStore().addTask(taskTitle.value, taskDesc.value);
+      childGetTasks();
       // if (error) throw error;
     } catch (error) {
       errorMsg.value = error.message;
