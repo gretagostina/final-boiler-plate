@@ -1,16 +1,46 @@
-
 <template>
   <Suspense>
     <Nav />
   </Suspense>
-    <NewTask />
-    <Footer />
+  <NewTask />
+
+  <TaskItem
+    v-for="(miSuperTareaHechaPorGreta, index) in tasks"
+    :key="index"
+    v-bind:taskData="miSuperTareaHechaPorGreta"
+    @childDelete="deleteTask"
+  />
+  <Footer />
 </template>
 
 <script setup>
-  import Nav from './../components/Nav.vue';
-  import Footer from '../components/Footer.vue';
-  import NewTask from '../components/NewTask.vue';
+import { ref } from "vue";
+import Nav from "./../components/Nav.vue";
+import Footer from "../components/Footer.vue";
+import NewTask from "../components/NewTask.vue";
+import { useTaskStore } from "../stores/task";
+import TaskItem from "../components/TaskItem.vue";
+
+// Template de funcion asyncronica
+// async function nombreDeFuncion() {}
+
+//declarar una variable en formato array para guardar tareas
+let tasks = ref([]);
+
+//Definicion de la tienda de tareas dentro de una variable para utilizar dentro de este archivo de una manera mas limpia.
+let taskStore = useTaskStore();
+
+//vamos a hace una función para conseguir las tareas del supabase
+async function getTasks() {
+  tasks.value = await taskStore.fetchTasks();
+}
+getTasks();
+
+//Creamos una función async para borrar la tarea
+async function deleteTask(task) {
+  await taskStore.deleteTask(task.id);
+  getTasks();
+}
 </script>
 
 <style></style>

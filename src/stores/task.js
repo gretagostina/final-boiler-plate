@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import { transformVNodeArgs } from "vue";
 import { supabase } from "../supabase";
 import { useUserStore } from "./user";
 
@@ -27,5 +28,21 @@ export const useTaskStore = defineStore("tasks", {
         },
       ]);
     },
+    //funcion para borrar tarea de supabase
+    async deleteTask(id) {
+      const { data, error } = await supabase
+        .from("tasks")
+        .delete()
+        .match({ id: id });
+    },
+    async updateTask(title, description, id) {
+      const { data, error } = await supabase
+        .from("tasks")
+        .update({ title: title }, { description: description })
+        .match({ id: îd });
+    },
   },
 });
+
+// hint
+// para editar pendiente como hemos pasado el argumento en la linea 31, aca el argumento que quieres greta vienen siendo el id de la transformVNodeArgs, el titulo y la descripcion.
