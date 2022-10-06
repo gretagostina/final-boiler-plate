@@ -1,5 +1,5 @@
 <template>
-  <div class="signing">
+  <div class="signin">
     <h1>Sign in</h1>
     <p v-if="errorMsg" class="">
       {{ errorMsg }}
@@ -84,6 +84,48 @@ const signIn = async () => {
 </script>
 
 <style>
+html {
+  background-image: url("../../public/img/background-signin.jpg");
+  background-repeat: no-repeat;
+}
+#app {
+  display: block !important;
+}
+.signin {
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 100px;
+  text-align: center;
+}
+.signin label {
+  margin-top: 10px;
+  display: block;
+}
+.signin input {
+  padding: 5px;
+}
+.signin button {
+  margin-top: 25px;
+  color: white;
+  background-color: #410a82;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.signin a {
+  color: #410a82;
+}
+
 .wu-text {
   color: black;
 }

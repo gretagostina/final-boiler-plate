@@ -7,9 +7,11 @@ He terminado de definir la funcionalidad que añade tareas al supabase, pero tod
 
 DÍA TRES: En la reunión hemos hecho que las tareas se vean en la web, como planeaba hacerlo. Y luego hemos creado la función de actualizar y eliminar tareas. En la función de actualizar he añadido que también se pueda modificar la descripción, tomando como referencia el sistema que usa para modificar el título. También he añadido un condicional para ocultar/mostrar los campos de edición.
 
+DÍA CUATRO: He buscado ideas para la task app y empecé a aplicar algunos atributos generales del sign in y sign up y además la he hecho responsive.
+
 ```sh
-PREVISIÓN DÍA CUATRO:
->Esqueleto y, si me da tiempo, CSS<
+PREVISIÓN DÍA CINCO:
+Intentar maquetar la sección de create task y hacer el footer.
 ```
 
 -------0-------

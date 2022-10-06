@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <h1><a href="">📁Task MaNAGER🗃️</a></h1>
+    <h1><a href="">Tasks List</a></h1>
     <ul>
       <li>Welcome Back {{ userFetch.email }}</li>
       <form @submit.prevent="signOut">

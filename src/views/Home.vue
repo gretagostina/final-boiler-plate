@@ -54,7 +54,12 @@ async function updateTask(task) {
 }
 </script>
 
-<style></style>
+<style>
+html {
+  background-image: none;
+  background-color: #f6f7f8;
+}
+</style>
 
 <!-- 
 **Hints**

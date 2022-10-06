@@ -1,5 +1,5 @@
 <template>
-  <div class="signing">
+  <div class="signup">
     <h1>Sign Up</h1>
 
     <p>Create your personal account to manage your own tasks.</p>
@@ -104,5 +104,40 @@ const buttonText = "Test the Sign In Route";
 // Show hide confrimPassword variable
 // Router to push user once SignedUp to Log In
 // Arrow function to SignUp user to supaBase with a timeOut() method for showing the error
-</script>
-<style></style> -->
+</script>-->
+<style>
+.signup {
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 100px;
+  text-align: center;
+}
+.signup label {
+  margin-top: 10px;
+  display: block;
+}
+.signup input {
+  padding: 5px;
+}
+.signup button {
+  margin-top: 25px;
+  color: white;
+  background-color: #410a82;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.signup a {
+  color: #410a82;
+}
+</style>

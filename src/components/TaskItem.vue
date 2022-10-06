@@ -29,19 +29,21 @@ function childDelete() {
   //emit("nombreEmit" , los valores del prop)
   emit("childDelete", props.taskData);
 }
-
+//he creado un condicional que permite esconder o mostrar la seccion para actualizar los datos a través de un botón.
 function showHideEdit(event) {
   let current = event.target;
   let nextSibling = current.nextSibling;
+  //cuando pulsamos el botón se ejecuta la funcion, esta comprueba el div contiene los datos de edicion tiene la clase hide definida, si no la tiene, la añade, si la tiene. la quita.
   if (nextSibling.classList.contains("hide")) {
     nextSibling.classList.remove("hide");
   } else {
     nextSibling.classList.add("hide");
   }
 }
-
+//creamos una función que saca los recursos para poder actualizar una tarea que hay en el task.js.
 function childUpdate() {
   props.taskData.title = document.getElementById("edit-title").value;
+  //Añado la descripción como un dato más para actualizar.
   props.taskData.description =
     document.getElementById("edit-description").value;
   emit("childUpdate", props.taskData);
@@ -61,7 +63,7 @@ function uncompleteTask() {
 li {
   margin: 1rem 0rem;
 }
-.hide {
+<!--cr-- > .hide {
   display: none;
 }
 </style>
