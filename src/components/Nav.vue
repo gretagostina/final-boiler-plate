@@ -43,5 +43,18 @@ const signOut = async () => {
 <style scoped>
 #nav {
   border: 3px solid yellow;
+  margin: 0 auto;
+  background-color: lightpink;
+  width: 100%;
+  height: 100px;
+}
+
+#nav .ul .li {
+  border: 3px solid brown;
+}
+
+html {
+  margin: 30px;
+  border: 3px solid red;
 }
 </style>

@@ -1,25 +1,27 @@
 <template>
-  <div>
+  <div id="createTask">
     <h2>Create task</h2>
     <br />
-    <input
-      v-model="taskTitle"
-      type="text"
-      id="newTaskTitle"
-      placeholder="Title"
-    /><br /><br />
+    <div class="input">
+      <input
+        v-model="taskTitle"
+        type="text"
+        id="newTaskTitle"
+        placeholder="Title"
+      /><br /><br />
 
-    <input
-      v-model="taskDesc"
-      type="text"
-      id="newTaskDesc"
-      placeholder="Description"
-    /><br /><br />
+      <input
+        v-model="taskDesc"
+        type="text"
+        id="newTaskDesc"
+        placeholder="Description"
+      /><br /><br />
 
-    <button @click.prevent="uploadTask">Create</button>
-  </div>
-  <div>
-    <h3 v-if="errorBool">{{ emptyString }}</h3>
+      <button @click.prevent="uploadTask">Create</button>
+    </div>
+    <div>
+      <h3 v-if="errorBool">{{ emptyString }}</h3>
+    </div>
   </div>
 </template>
 
@@ -87,4 +89,19 @@ async function uploadTask() {
 // arrow function to call the form holding the task title and task description that uses a conditional to first checks if the task title is empty, if true the error message is displayed through the errorMessage container and sets a timeOut method that hides the error after some time. Else, its emmits a custom event to the home view with the task title and task description; clears the task title and task description input fields.
 </script>
 
-<style></style>
+<style>
+html {
+  background-color: white;
+  color: grey;
+}
+input {
+  margin: 0 auto;
+  height: 28px;
+  padding: 25px;
+  width: 100%;
+  background: lightskyblue;
+  color: grey;
+  text-transform: uppercase;
+  border: none;
+}
+</style>

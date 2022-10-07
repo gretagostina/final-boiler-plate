@@ -5,10 +5,12 @@
       <br />
       <i> {{ taskData.description }}</i>
       <br />
-      <button id="complete-btn" @click="completeTask">complete</button>
-      <button id="uncomplete-btn" @click="uncompleteTask">uncomplete</button>
-      <button @click="childDelete">delete</button>
-      <button @click="showHideEdit" class="edit">edit</button>
+      <div class="buttonsItem">
+        <button id="complete-btn" @click="completeTask">complete</button>
+        <button id="uncomplete-btn" @click="uncompleteTask">uncomplete</button>
+        <button @click="childDelete">delete</button>
+        <button @click="showHideEdit" class="edit">edit</button>
+      </div>
       <div class="sectionEditable hide">
         <input id="edit-title" name="title" />
         <input id="edit-description" name="description" />
@@ -65,5 +67,20 @@ li {
 }
 <!--cr-- > .hide {
   display: none;
+}
+
+.taskItem {
+  margin: 0 auto;
+  background-color: white;
+  width: 100%;
+}
+
+.buttonsItem {
+  border: 3px solid red;
+  height: 40px;
+  text-align: right;
+  /*padding: 30px;*/
+  color: grey;
+  text-transform: uppercase;
 }
 </style>

@@ -95,26 +95,40 @@ html {
   margin: 0 auto;
   background-color: white;
   border-radius: 20px;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-left: 170px;
+  padding-right: 170px;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 100px;
   text-align: center;
+  text-transform: uppercase;
+  border: 3px solid red;
 }
 .signin label {
   margin-top: 10px;
+  width: 100%;
   display: block;
+  border: 3px solid blue;
 }
 .signin input {
   padding: 5px;
+  width: 100%;
+  padding: 30px 139px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-radius: 40px;
+  background-color: lightgrey;
+  border: 3px solid green;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-justify: ;
 }
 .signin button {
   margin-top: 25px;
   color: white;
   background-color: #410a82;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 10px;
