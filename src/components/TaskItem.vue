@@ -28,7 +28,6 @@ const props = defineProps(["taskData"]);
 //creamos una función para pasarle nuestro evento particular (custom) al padre para poder habilitar el delete de una tarea en particular. Esto se hace mediante un emit.
 
 function childDelete() {
-  //emit("nombreEmit" , los valores del prop)
   emit("childDelete", props.taskData);
 }
 //he creado un condicional que permite esconder o mostrar la seccion para actualizar los datos a través de un botón.

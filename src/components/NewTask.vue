@@ -2,24 +2,22 @@
   <div id="createTask">
     <h2>Create task</h2>
     <br />
-    <div class="input">
+    <div class="inputs">
       <input
         v-model="taskTitle"
         type="text"
         id="newTaskTitle"
         placeholder="Title"
       /><br /><br />
-
       <input
         v-model="taskDesc"
         type="text"
         id="newTaskDesc"
         placeholder="Description"
       /><br /><br />
-
-      <button @click.prevent="uploadTask">Create</button>
     </div>
-    <div>
+    <div class="botones">
+      <button @click.prevent="uploadTask">Create</button>
       <h3 v-if="errorBool">{{ emptyString }}</h3>
     </div>
   </div>
@@ -34,7 +32,6 @@ const emit = defineEmits(["childNewTask", "childGetTasks"]);
 let taskTitle = ref("");
 let taskDesc = ref("");
 let errorBool = ref(false);
-//TODO: Pendiente definir el mensaje final de error.
 let errorMsg = ref("No se ha podido añadir la tarea.");
 const emptyString = ref("");
 
@@ -51,11 +48,9 @@ async function uploadTask() {
       errorBool.value = false;
     }, 1000);
   } else {
-    // CODIGO MIO
     try {
       await useTaskStore().addTask(taskTitle.value, taskDesc.value);
       childGetTasks();
-      // if (error) throw error;
     } catch (error) {
       errorMsg.value = error.message;
       setTimeout(() => {
@@ -64,7 +59,6 @@ async function uploadTask() {
     }
     return;
 
-    // FIN CODIGO MIO
     emit("childNewTask", taskTitle.value, taskDesc.value);
     taskTitle.value = "";
     taskDesc.value = "";
@@ -94,10 +88,19 @@ html {
   background-color: white;
   color: grey;
 }
+
+#createTask {
+  margin: 0 auto;
+  background-color: lightgreen;
+  width: 200%;
+  padding: 4em;
+  margin-right: px;
+}
+
 input {
   margin: 0 auto;
   height: 28px;
-  padding: 25px;
+  padding: 0px;
   width: 100%;
   background: lightskyblue;
   color: grey;
