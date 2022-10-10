@@ -61,17 +61,22 @@ function uncompleteTask() {
 </script>
 
 <style>
-li {
+/*li {
   margin: 1rem 0rem;
-}
+}*/
 <!--cr-- > .hide {
   display: none;
 }
 
 .taskItem {
-  margin: 0 auto;
-  background-color: white;
+  margin: auto;
+  background-color: #1fd4ad;
+  border-radius: 10px;
   width: 100%;
+}
+
+.taskItem li {
+  list-style: none;
 }
 
 .buttonsItem {

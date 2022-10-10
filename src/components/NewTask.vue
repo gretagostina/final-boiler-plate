@@ -89,22 +89,39 @@ html {
   color: grey;
 }
 
+h2 {
+  color: #9a9a9a;
+}
+
 #createTask {
   margin: 0 auto;
-  background-color: lightgreen;
-  width: 200%;
+  background-color: #f1e9f6;
+  border-radius: 10px;
   padding: 4em;
   margin-right: px;
+  text-align: center;
+  border: 5px dashed lightgrey;
+}
+
+button {
+  background-color: #410a82;
+  color: white;
+  border-radius: 15px;
+  font-size: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 input {
   margin: 0 auto;
-  height: 28px;
+  height: 40px;
   padding: 0px;
   width: 100%;
-  background: lightskyblue;
-  color: grey;
+  color: lightgrey;
   text-transform: uppercase;
+  font-weight: bolder;
   border: none;
 }
 </style>

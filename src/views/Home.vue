@@ -3,14 +3,15 @@
     <Nav />
   </Suspense>
   <NewTask @childGetTasks="getTasks" />
-
-  <TaskItem
-    v-for="(miSuperTareaHechaPorGreta, index) in tasks"
-    :key="index"
-    v-bind:taskData="miSuperTareaHechaPorGreta"
-    @childDelete="deleteTask"
-    @childUpdate="updateTask"
-  />
+  <div class="cards">
+    <TaskItem
+      v-for="(miSuperTareaHechaPorGreta, index) in tasks"
+      :key="index"
+      v-bind:taskData="miSuperTareaHechaPorGreta"
+      @childDelete="deleteTask"
+      @childUpdate="updateTask"
+    />
+  </div>
   <Footer />
 </template>
 
@@ -56,8 +57,30 @@ async function updateTask(task) {
 
 <style>
 html {
-  background-image: none;
-  background-color: #f6f7f8;
+  background-image: none !important;
+  background-color: #f6f7f8 !important;
+}
+#app {
+  width: 100%;
+  max-width: none;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 20px;
+  grid-gap: 25px;
+}
+
+@media (max-width: 550px) {
+  #app {
+    width: 100%;
+    max-width: none;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
+  }
 }
 </style>
 

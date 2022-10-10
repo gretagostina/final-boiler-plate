@@ -15,7 +15,6 @@
   height: 4rem;
   justify-content: center;
   align-items: flex-end;
-  font-family: Open Sans;
 }
 
 #container {

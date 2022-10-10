@@ -1,12 +1,14 @@
 <template>
   <div id="nav">
-    <h1><a href="">Tasks List</a></h1>
-    <ul>
-      <li>Welcome Back {{ userFetch.email }}</li>
+    <div class="nav-title">
+      <h1><a href="">Tasks List</a></h1>
+    </div>
+    <div class="nav-user">
+      <p>Welcome Back {{ userFetch.email }}</p>
       <form @submit.prevent="signOut">
-        <li><button type="submit">Log Out</button></li>
+        <button type="submit">Log Out</button>
       </form>
-    </ul>
+    </div>
   </div>
 </template>
 
@@ -43,11 +45,33 @@ const signOut = async () => {
 
 <style scoped>
 #nav {
-  border: 3px solid yellow;
   margin: 0 auto;
-  background-color: lightpink;
+  background-color: #f8f9fa;
   width: 100%;
   height: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+}
+.nav-title {
+  padding-left: 20px;
+  padding-top: 5px;
+}
+.nav-user {
+  text-align: right;
+}
+.nav-user p {
+  font-size: 18px;
+}
+.nav-user button {
+  background-color: #410a82;
+  color: white;
+  border-radius: 15px;
+  font-size: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 #nav .ul .li {

@@ -32,6 +32,10 @@ onMounted(async () => {
 </template>
 
 <style>
+@import url("http://fonts.googleapis.com/css?family=Lato:400,700");
+html {
+  font-family: "Lato";
+}
 /*#fondo {
   background-color: red;
   border: 3px solid blue;
