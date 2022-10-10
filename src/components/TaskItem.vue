@@ -1,19 +1,39 @@
 <template>
   <div class="taskItem">
     <li>
-      <b>{{ taskData.title }} </b>
+      <div class="título">
+        <b>{{ taskData.title }}</b>
+      </div>
       <br />
-      <i> {{ taskData.description }}</i>
+      <div class="descrip">
+        <i> {{ taskData.description }}</i>
+      </div>
       <br />
       <div class="buttonsItem">
-        <button id="complete-btn" @click="completeTask">complete</button>
-        <button id="uncomplete-btn" @click="uncompleteTask">uncomplete</button>
-        <button @click="childDelete">delete</button>
-        <button @click="showHideEdit" class="edit">edit</button>
+        <button id="complete-btn" @click="completeTask">
+          <i class="fa fa-check"></i>
+        </button>
+        <button id="uncomplete-btn" @click="uncompleteTask">
+          <i class="fa fa-arrow-left"></i>
+        </button>
+        <button @click="childDelete">
+          <i class="fa fa-trash"></i>
+        </button>
+        <button @click="showHideEdit" class="edit">
+          <i class="fa fa-edit"></i>
+        </button>
       </div>
-      <div class="sectionEditable hide">
-        <input id="edit-title" name="title" />
-        <input id="edit-description" name="description" />
+      <div class="sectionEditable">
+        <div class="title-edit">
+          <input id="edit-title" name="title" placeholder="change title" />
+        </div>
+        <div class="edit-desc">
+          <input
+            id="edit-description"
+            name="description"
+            placeholder="change description"
+          />
+        </div>
         <button @click="childUpdate">update</button>
       </div>
     </li>
@@ -80,11 +100,13 @@ function uncompleteTask() {
 }
 
 .buttonsItem {
-  border: 3px solid red;
-  height: 40px;
+  height: 100%;
   text-align: right;
   /*padding: 30px;*/
   color: grey;
-  text-transform: uppercase;
+}
+
+.sectionEditable {
+  color: lightgrey;
 }
 </style>

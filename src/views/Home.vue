@@ -61,7 +61,7 @@ html {
   background-color: #f6f7f8 !important;
 }
 #app {
-  width: 100%;
+  /* width: 100%;*/
   max-width: none;
 }
 .cards {
@@ -71,9 +71,20 @@ html {
   grid-gap: 25px;
 }
 
+@media (max-width: 850px) {
+  #app {
+    max-width: none;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+  }
+}
+
 @media (max-width: 550px) {
   #app {
-    width: 100%;
+    /* width: 100%;*/
     max-width: none;
   }
   .cards {

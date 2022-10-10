@@ -4,6 +4,9 @@
     <p>Ironhack st 56, 46352</p>
     <br />Spain
   </div>
+  <p>SERVICES</p>
+  <p>ABOUT</p>
+  <p>LEGAL</p>
 </template>
 
 <script setup></script>

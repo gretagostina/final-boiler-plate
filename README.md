@@ -15,7 +15,9 @@ DÍA SEIS: Intentar acabar de maquetar la sección del create task, los tasks it
 
 ```sh
 PREVISIÓN DÍA SIETE:
--->pendiente<--
+·booleano de tarea completada o no.
+·quitar extensión del correo en el nav.
+·terminar por definir un estilo.
 ```
 
 -------0-------
