@@ -26,7 +26,7 @@ onMounted(async () => {
 </script>
 
 <template id="fondo">
-  <div id="background">
+  <div id="background" class="content">
     <router-view />
   </div>
 </template>

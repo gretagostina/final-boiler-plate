@@ -1,42 +1,40 @@
 <template>
   <div class="taskItem">
-    <li>
-      <div class="título">
-        <b>{{ taskData.title }}</b>
+    <div class="title">
+      <b>{{ taskData.title }}</b>
+    </div>
+    <br />
+    <div class="description">
+      <i> {{ taskData.description }}</i>
+    </div>
+    <br />
+    <div class="buttonsItem">
+      <button id="complete-btn" @click="completeTask">
+        <i class="fa fa-check"></i>
+      </button>
+      <button id="uncomplete-btn" @click="uncompleteTask">
+        <i class="fa fa-arrow-left"></i>
+      </button>
+      <button @click="childDelete">
+        <i class="fa fa-trash"></i>
+      </button>
+      <button @click="showHideEdit" class="edit">
+        <i class="fa fa-edit"></i>
+      </button>
+    </div>
+    <div class="sectionEditable hide">
+      <div class="title-edit">
+        <input id="edit-title" name="title" v-model="props.taskData.title" />
       </div>
-      <br />
-      <div class="descrip">
-        <i> {{ taskData.description }}</i>
+      <div class="edit-desc">
+        <input
+          id="edit-description"
+          name="description"
+          v-model="props.taskData.description"
+        />
       </div>
-      <br />
-      <div class="buttonsItem">
-        <button id="complete-btn" @click="completeTask">
-          <i class="fa fa-check"></i>
-        </button>
-        <button id="uncomplete-btn" @click="uncompleteTask">
-          <i class="fa fa-arrow-left"></i>
-        </button>
-        <button @click="childDelete">
-          <i class="fa fa-trash"></i>
-        </button>
-        <button @click="showHideEdit" class="edit">
-          <i class="fa fa-edit"></i>
-        </button>
-      </div>
-      <div class="sectionEditable">
-        <div class="title-edit">
-          <input id="edit-title" name="title" placeholder="change title" />
-        </div>
-        <div class="edit-desc">
-          <input
-            id="edit-description"
-            name="description"
-            placeholder="change description"
-          />
-        </div>
-        <button @click="childUpdate">update</button>
-      </div>
-    </li>
+      <button class="btn-update" @click="childUpdate">Update</button>
+    </div>
   </div>
 </template>
 
@@ -53,12 +51,12 @@ function childDelete() {
 //he creado un condicional que permite esconder o mostrar la seccion para actualizar los datos a través de un botón.
 function showHideEdit(event) {
   let current = event.target;
-  let nextSibling = current.nextSibling;
+  let sectionEditable = current.parentElement.parentElement.nextSibling;
   //cuando pulsamos el botón se ejecuta la funcion, esta comprueba el div contiene los datos de edicion tiene la clase hide definida, si no la tiene, la añade, si la tiene. la quita.
-  if (nextSibling.classList.contains("hide")) {
-    nextSibling.classList.remove("hide");
+  if (sectionEditable.classList.contains("hide")) {
+    sectionEditable.classList.remove("hide");
   } else {
-    nextSibling.classList.add("hide");
+    sectionEditable.classList.add("hide");
   }
 }
 //creamos una función que saca los recursos para poder actualizar una tarea que hay en el task.js.
@@ -84,15 +82,17 @@ function uncompleteTask() {
 /*li {
   margin: 1rem 0rem;
 }*/
-<!--cr-- > .hide {
+.hide {
   display: none;
 }
-
+h2 {
+  font-size: 35px;
+}
 .taskItem {
-  margin: auto;
   background-color: #1fd4ad;
   border-radius: 10px;
-  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .taskItem li {
@@ -100,13 +100,46 @@ function uncompleteTask() {
 }
 
 .buttonsItem {
-  height: 100%;
-  text-align: right;
-  /*padding: 30px;*/
+  text-align: center;
+  margin-bottom: 20px;
   color: grey;
 }
 
 .sectionEditable {
   color: lightgrey;
+}
+.title {
+  padding-top: 20px;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.description {
+  text-align: justify;
+}
+.buttonsItem button {
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 18px;
+  border-radius: 20px;
+}
+.buttonsItem button i {
+  padding-top: 20px;
+  font-size: 25px;
+  margin-left: -12px;
+  margin-top: -32px;
+  position: absolute;
+}
+.buttonsItem button i.fa-trash {
+  margin-left: -10px;
+}
+.btn-update {
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 </style>

@@ -66,7 +66,7 @@ html {
 }
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-top: 20px;
   grid-gap: 25px;
 }

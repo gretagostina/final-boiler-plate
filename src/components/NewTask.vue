@@ -1,6 +1,7 @@
 <template>
   <div id="createTask">
     <h2>Create task</h2>
+    <!-- TODO: Añadir una <img> con lo que te guste. -->
     <br />
     <div class="inputs">
       <input
@@ -98,7 +99,8 @@ h2 {
   background-color: #f1e9f6;
   border-radius: 10px;
   padding: 4em;
-  margin-right: px;
+  padding-top: 6em;
+  padding-bottom: 6em;
   text-align: center;
   border: 5px dashed lightgrey;
 }
@@ -119,9 +121,11 @@ input {
   height: 40px;
   padding: 0px;
   width: 100%;
-  color: lightgrey;
+  color: black;
   text-transform: uppercase;
   font-weight: bolder;
   border: none;
+  padding-left: 15px;
+  margin-left: -8px;
 }
 </style>
