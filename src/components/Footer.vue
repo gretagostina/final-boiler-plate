@@ -19,7 +19,7 @@
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: purple;
+  background-color: #a3d9ff;
 }
 #pie {
   height: 4rem;

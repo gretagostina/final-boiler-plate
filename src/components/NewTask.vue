@@ -86,7 +86,7 @@ async function uploadTask() {
 
 <style>
 html {
-  background-color: white;
+  background-color: #a3d9ff;
   color: grey;
 }
 
@@ -96,17 +96,17 @@ h2 {
 
 #createTask {
   margin: 0 auto;
-  background-color: #f1e9f6;
+  background-color: #7e6b8f;
   border-radius: 10px;
   padding: 4em;
   padding-top: 6em;
   padding-bottom: 6em;
   text-align: center;
-  border: 5px dashed lightgrey;
+  border: 5px dashed #b8aec2;
 }
 
 button {
-  background-color: #410a82;
+  background-color: #da3e52;
   color: white;
   border-radius: 15px;
   font-size: 20px;

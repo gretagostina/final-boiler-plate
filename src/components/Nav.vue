@@ -20,6 +20,8 @@ import { useUserStore } from "../stores/user";
 const errorMsg = ref("");
 const redirect = useRouter();
 const userFetch = await useUserStore().fetchUser();
+let position = userFetch.email.search("@");
+userFetch.email = userFetch.email.slice(0, position);
 const signOut = async () => {
   try {
     // calls the user store and send the users info to backend to logIn
@@ -46,7 +48,7 @@ const signOut = async () => {
 <style scoped>
 #nav {
   margin: 0 auto;
-  background-color: #f8f9fa;
+  background-color: #a3d9ff;
   width: 100%;
   height: 100px;
   display: grid;
@@ -64,8 +66,8 @@ const signOut = async () => {
   font-size: 18px;
 }
 .nav-user button {
-  background-color: #410a82;
-  color: white;
+  background-color: #da3e52;
+  color: #a3d9ff;
   border-radius: 15px;
   font-size: 20px;
   padding-left: 15px;

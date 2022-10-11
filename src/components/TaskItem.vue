@@ -89,7 +89,7 @@ h2 {
   font-size: 35px;
 }
 .taskItem {
-  background-color: #1fd4ad;
+  background-color: #e2b4bd;
   border-radius: 10px;
   padding-left: 20px;
   padding-right: 20px;
