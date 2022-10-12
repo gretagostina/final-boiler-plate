@@ -71,4 +71,9 @@ html {
   display: inline-block;
   font-size: 16px;
 }
+
+h1 {
+  color: red;
+  font: bolder;
+}
 </style>

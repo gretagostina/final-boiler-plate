@@ -1,4 +1,8 @@
 <template>
+  <div class="presentation">
+    <h1>Log In to IronTasks</h1>
+    <h3>Start Organizing your tasks todays!</h3>
+  </div>
   <div class="signin">
     <h1>Sign in</h1>
     <p v-if="errorMsg" class="">
@@ -39,6 +43,7 @@
       <p class="">
         <PersonalRouter :route="route" :buttonText="buttonText" />
       </p>
+      <p>Forgot password? No worries and clic.</p>
     </form>
   </div>
 </template>
@@ -92,6 +97,11 @@ html {
 }
 #app {
   display: block !important;
+}
+
+.presentation {
+  border: 3px solid green;
+  background: black;
 }
 .signin {
   margin: 0 auto;

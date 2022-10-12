@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div id="pie" class="left-footer">
-      <h1>made by Greta</h1>
+      <h1>made by Greta© 2022 TaskApp. All rights reserved</h1>
       <p>Ironhack st 56, 46352</p>
       <br />Spain
     </div>

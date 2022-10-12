@@ -9,17 +9,28 @@
     </div>
     <br />
     <div class="buttonsItem">
-      <button id="complete-btn" @click="completeTask">
-        <i class="fa fa-check"></i>
+      <button
+        v-if="taskData.is_complete == false"
+        id="complete-btn"
+        @click="completeTask"
+      >
+        <i class="fa fa-check"></i
+        ><span class="complete-task">Completar Tarea</span>
       </button>
-      <button id="uncomplete-btn" @click="uncompleteTask">
-        <i class="fa fa-arrow-left"></i>
+      <button
+        v-if="taskData.is_complete == true"
+        id="uncomplete-btn"
+        @click="uncompleteTask"
+      >
+        <i class="fa fa-arrow-left"></i
+        ><span class="uncomplete-task">Deshacer Tarea</span>
       </button>
       <button @click="childDelete">
-        <i class="fa fa-trash"></i>
+        <i class="fa fa-trash"></i
+        ><span class="delete-task">Eliminar Tarea</span>
       </button>
       <button @click="showHideEdit" class="edit">
-        <i class="fa fa-edit"></i>
+        <i class="fa fa-edit"></i><span class="edit-task">Editar Tarea</span>
       </button>
     </div>
     <div class="sectionEditable hide">
@@ -45,7 +56,12 @@ const props = defineProps(["taskData"]);
 
 //creamos una función para pasarle nuestro evento particular (custom) al padre para poder habilitar el delete de una tarea en particular. Esto se hace mediante un emit.
 
-function childDelete() {
+function childDelete(event) {
+  /*let current = event.target;
+  let taskCard = current.parentElement.parentElement.parentElement;
+  console.log(taskCard);
+  taskCard.style.opacity = "0";
+  setTimeout(() => taskCard.remove(), 1000);*/
   emit("childDelete", props.taskData);
 }
 //he creado un condicional que permite esconder o mostrar la seccion para actualizar los datos a través de un botón.
@@ -93,6 +109,9 @@ h2 {
   border-radius: 10px;
   padding-left: 20px;
   padding-right: 20px;
+  opacity: 1;
+  -webkit-transition: opacity 1000ms linear;
+  transition: opacity 1000ms linear;
 }
 
 .taskItem li {
@@ -141,5 +160,50 @@ h2 {
   cursor: pointer;
   margin-bottom: 10px;
   margin-top: 10px;
+}
+button span {
+  display: none;
+  position: absolute;
+  margin-top: -63px;
+  margin-left: -80px;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 10px;
+}
+button span:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 10px;
+  height: 10px;
+  background: #f8f8f8;
+  left: 50%;
+  margin-left: -10px;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+button:hover span {
+  display: block;
+}
+button span.complete-task {
+  margin-left: -73px;
+}
+button span.uncomplete-task {
+  margin-left: -68px;
+}
+button span.delete-task {
+  margin-left: -62px;
+}
+button span.edit-task {
+  margin-left: -52px;
+}
+.sectionEditable input {
+  width: 360px;
+}
+.description i {
+  width: 360px;
+  word-break: break-all;
 }
 </style>

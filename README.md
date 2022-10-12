@@ -13,11 +13,17 @@ DÍA CINCO: Maquetación del create task y he mejorado el sign in y sign up.
 
 DÍA SEIS: Intentar acabar de maquetar la sección del create task, los tasks item me cuestan un poco de estilizarlos. He creado el footer pero no es el definitivo, estoy valorando qué más detalles añadir.
 
+DÍA SIETE: Hemos hecho el deployment en vercel. En mi caso hubieron algunos fallos para hacer el deployment y he contado con la ayuda de Jarko y Aleix para localizar los problemas. Una vez resuelto, he procedido a eliminar la extensión del correo en el home y he modificado el JS del create task y el task item.
+
+DÍA OCHO:
+He puesto el burger y lo hice responsive. He corregido un botón del taskitem. Y he corregido un input que no funcionaba correctamente al escribir textos largos. Y he aprovechado para añadir un texto descriptivo cuando se señala un botón en caso de que al usuario no le parezca lo suficientemente intuitivo.
+
 ```sh
-PREVISIÓN DÍA SIETE:
-·booleano de tarea completada o no.
-·quitar extensión del correo en el nav.
-·terminar por definir un estilo.
+PREVISIÓN DÍA NUEVE:
+·agregar un forgot password
+·pulir tareas JS
+·colocar fechas actuales para el título del home.
+·Terminar de diseñar la app.
 ```
 
 -------0-------
