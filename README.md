@@ -20,10 +20,10 @@ He puesto el burger y lo hice responsive. He corregido un botón del taskitem. Y
 
 ```sh
 PREVISIÓN DÍA NUEVE:
-·agregar un forgot password
-·pulir tareas JS
-·colocar fechas actuales para el título del home.
-·Terminar de diseñar la app.
+·agregar un forgot password.
+·colocar fecha en el título del home.
+·Terminar de diseñar la app (colocar imágenes o argo asín).
+·completar diapositivas del proyecto.
 ```
 
 -------0-------

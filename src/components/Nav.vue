@@ -65,12 +65,18 @@ const signOut = async () => {
 <style scoped>
 #nav {
   margin: 0 auto;
-  background-color: #a3d9ff;
+  background-color: #e1e1e1;
   width: 100%;
   height: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+#nav h1 a {
+  color: black;
+  font-family: "Montserrat" !important;
+  text-decoration: none !important;
 }
 .nav-title {
   padding-left: 20px;
@@ -78,28 +84,25 @@ const signOut = async () => {
 }
 .nav-user {
   text-align: right;
+  padding-right: 30px;
 }
 .nav-user p {
   font-size: 18px;
 }
 .nav-user button {
-  background-color: #da3e52;
-  color: #a3d9ff;
+  background-color: #fff47c;
+  color: black;
   border-radius: 15px;
   font-size: 20px;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
+  width: 140px;
 }
 
 #nav .ul .li {
   border: 3px solid brown;
-}
-
-html {
-  margin: 30px;
-  border: 3px solid red;
 }
 
 /* HAMBURGUESA */
@@ -113,11 +116,6 @@ html,
 body {
   margin: 0;
   height: 100%;
-}
-
-* {
-  font-family: "Raleway";
-  box-sizing: border-box;
 }
 
 .top-nav {

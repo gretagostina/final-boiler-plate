@@ -7,6 +7,7 @@ import { ref } from "vue";
 const router = useRouter();
 const userStore = useUserStore();
 const { user } = storeToRefs(userStore);
+
 onMounted(async () => {
   const appReady = ref(null);
   try {
@@ -34,21 +35,12 @@ onMounted(async () => {
 <style>
 @import url("http://fonts.googleapis.com/css?family=Lato:400,700");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;0,900;1,900&display=swa");
+
 html {
   font-family: "Lato";
+  background-color: #fff47c;
 }
-/*#fondo {
-  background-color: red;
-  border: 3px solid blue;
-}
-#background {
-  color: lightgray;
-  border: 3px solid green;
-  margin: 0 auto;
-  text-align: center;
-  width: 1200px;
-  background-color: blueviolet;
-}*/
 .wu-text {
   color: black;
 }

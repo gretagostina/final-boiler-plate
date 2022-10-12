@@ -1,7 +1,7 @@
 <template>
   <div class="presentation">
     <h1>Log In to IronTasks</h1>
-    <h3>Start Organizing your tasks todays!</h3>
+    <h3>Start Organizing your tasks today!</h3>
   </div>
   <div class="signin">
     <h1>Sign in</h1>
@@ -14,7 +14,7 @@
         <input
           class=""
           type="email"
-          placeholder="dave@wuTangfinancial.com"
+          placeholder="user@example.com"
           v-model="email"
           id="email"
         />
@@ -26,7 +26,7 @@
             class="password2"
             :type="passwordFieldType"
             onpaste="return false"
-            placeholder="************"
+            placeholder="* * * * * *"
             v-model="password"
             id="password"
           />
@@ -39,8 +39,8 @@
         </div>
       </div>
       <button class="" type="submit">Sign In</button>
-      <p>Don't have an account?</p>
-      <p class="">
+      <p>
+        Don't have an account?
         <PersonalRouter :route="route" :buttonText="buttonText" />
       </p>
       <p>Forgot password? No worries and clic.</p>
@@ -55,6 +55,7 @@ import { supabase } from "../supabase";
 import { useRouter } from "vue-router";
 import { useUserStore } from "../stores/user";
 import { storeToRefs } from "pinia";
+
 // Route Variables
 const route = "/auth/sign-up";
 const buttonText = "Create one!";
@@ -89,19 +90,17 @@ const signIn = async () => {
 </script>
 
 <style>
-html {
-  background-image: url("../../public/img/background-signin.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #2b0d57;
-}
 #app {
   display: block !important;
 }
-
 .presentation {
-  border: 3px solid green;
-  background: black;
+  text-align: center;
+}
+.presentation h1 {
+  color: black;
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 40px;
 }
 .signin {
   margin: 0 auto;
@@ -111,8 +110,15 @@ html {
   padding-right: 70px;
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-top: 100px;
+  margin-top: 45px;
   text-align: center;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.signin h1 {
+  color: black;
 }
 .signin label {
   margin-top: 10px;
@@ -123,8 +129,8 @@ html {
 }
 .signin button {
   margin-top: 25px;
-  color: white;
-  background-color: #410a82;
+  color: black;
+  background-color: #e1e1e1;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
@@ -132,6 +138,7 @@ html {
   border-radius: 10px;
   font-weight: bold;
   font-size: 16px;
+  border: none;
 }
 
 .signin a {

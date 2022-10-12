@@ -103,9 +103,11 @@ function uncompleteTask() {
 }
 h2 {
   font-size: 35px;
+  font-family: "Montserrat";
+  color: black;
 }
 .taskItem {
-  background-color: #e2b4bd;
+  background-color: #ffc15e;
   border-radius: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -131,6 +133,7 @@ h2 {
   padding-top: 20px;
   font-size: 25px;
   text-transform: uppercase;
+  font-family: "Montserrat";
 }
 .description {
   text-align: justify;

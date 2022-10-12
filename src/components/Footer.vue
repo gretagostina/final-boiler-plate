@@ -3,7 +3,7 @@
     <div id="pie" class="left-footer">
       <h1>made by Greta© 2022 TaskApp. All rights reserved</h1>
       <p>Ironhack st 56, 46352</p>
-      <br />Spain
+      <p>Spain</p>
     </div>
     <div class="right-footer">
       <p>SERVICES</p>
@@ -19,12 +19,16 @@
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: #a3d9ff;
+  background-color: #e1e1e1;
 }
 #pie {
-  height: 4rem;
+  height: 12rem;
   justify-content: center;
   align-items: flex-end;
+  padding-left: 30px;
+}
+#pie h1 {
+  color: black;
 }
 .right-footer {
   text-align: right;

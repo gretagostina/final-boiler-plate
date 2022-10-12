@@ -8,7 +8,6 @@
   </div>
   <div id="createTask">
     <h2>Create task</h2>
-    <!-- TODO: Añadir una <img> con lo que te guste. -->
     <br />
     <div class="inputs">
       <input
@@ -92,18 +91,17 @@ async function uploadTask() {
 </script>
 
 <style>
-html {
-  background-color: #a3d9ff;
-  color: grey;
-}
-
 h2 {
   color: #9a9a9a;
+}
+.presentation {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 #createTask {
   margin: 0 auto;
-  background-color: #7e6b8f;
+  background-color: white;
   border-radius: 10px;
   padding: 4em;
   padding-top: 6em;
@@ -113,14 +111,24 @@ h2 {
 }
 
 button {
-  background-color: #da3e52;
-  color: white;
+  background-color: #e1e1e1;
+  color: black;
   border-radius: 15px;
   font-size: 20px;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
+  border: none;
+  width: 100%;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.012), 0 41.8px 33.4px rgba(0, 0, 0, 0.046),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+button:hover {
+  background-color: #aeaeae;
 }
 
 input {
@@ -134,5 +142,7 @@ input {
   border: none;
   padding-left: 15px;
   margin-left: -8px;
+  background-color: #fff47c;
+  border-radius: 10px;
 }
 </style>

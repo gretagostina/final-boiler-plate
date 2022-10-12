@@ -1,16 +1,18 @@
 <template>
+  <div class="presentation">
+    <h1>Sign up to IronTasks</h1>
+    <h3>Join us and start organizing your tasks today!</h3>
+  </div>
   <div class="signup">
-    <h1>Sign Up</h1>
-
+    <h1>Sign up</h1>
     <p>Create your personal account to manage your own tasks.</p>
-
     <form @submit.prevent="signUp">
       <div class="">
         <label class="" for="">Email</label><br />
         <input
           class=""
           type="email"
-          placeholder="john@example.com"
+          placeholder="user@example.com"
           v-model="email"
           id="email"
         />
@@ -20,7 +22,7 @@
         <input
           class=""
           type="password"
-          placeholder="************"
+          placeholder="choose your keyword"
           v-model="password"
           id="password"
         />
@@ -30,7 +32,7 @@
         <input
           class=""
           type="password"
-          placeholder="************"
+          placeholder="* * * * * *"
           v-model="confirmPassword"
           id="confirmPassword"
         />
@@ -117,6 +119,14 @@ async function signUp() {
   padding-bottom: 20px;
   margin-top: 100px;
   text-align: center;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.signup h1 {
+  color: black;
 }
 .signup label {
   margin-top: 10px;
@@ -127,8 +137,8 @@ async function signUp() {
 }
 .signup button {
   margin-top: 25px;
-  color: white;
-  background-color: #410a82;
+  color: black;
+  background-color: #e1e1e1;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
@@ -136,6 +146,7 @@ async function signUp() {
   border-radius: 10px;
   font-weight: bold;
   font-size: 16px;
+  border: none;
 }
 
 .signup a {

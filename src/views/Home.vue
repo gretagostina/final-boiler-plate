@@ -56,10 +56,6 @@ async function updateTask(task) {
 </script>
 
 <style>
-html {
-  background-image: none !important;
-  background-color: #f6f7f8 !important;
-}
 #app {
   /* width: 100%;*/
   max-width: none;
@@ -69,6 +65,7 @@ html {
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 20px;
   grid-gap: 25px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 850px) {
