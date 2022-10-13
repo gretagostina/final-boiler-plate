@@ -65,7 +65,7 @@ async function updateTask(task) {
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 20px;
   grid-gap: 25px;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 }
 
 @media (max-width: 850px) {

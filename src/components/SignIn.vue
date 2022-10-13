@@ -44,6 +44,7 @@
         <PersonalRouter :route="route" :buttonText="buttonText" />
       </p>
       <p>Forgot password? No worries and clic.</p>
+      <!--<button @click="resetPassword">HERE</button>-->
     </form>
   </div>
 </template>
@@ -87,6 +88,11 @@ const signIn = async () => {
     }, 5000);
   }
 };
+async function resetPassword() {
+  let res = await supabase.auth.api.resetPasswordForEmail(
+    "gretagostina@gmail.com"
+  );
+}
 </script>
 
 <style>

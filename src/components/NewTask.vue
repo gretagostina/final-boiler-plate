@@ -2,7 +2,8 @@
   <div class="presentation">
     <h1>Add a new task</h1>
     <p>
-      keep your life organized, prepare for a trip? Star here. Today's date is
+      keep your life organized, prepare for a trip? Start here. Today's date is
+      {{ today }}
       {{ somedate }}
     </p>
   </div>
@@ -58,6 +59,8 @@ async function uploadTask() {
     try {
       await useTaskStore().addTask(taskTitle.value, taskDesc.value);
       childGetTasks();
+      document.getElementById("newTaskTitle").value = "";
+      document.getElementById("newTaskDesc").value = "";
     } catch (error) {
       errorMsg.value = error.message;
       setTimeout(() => {
@@ -72,6 +75,12 @@ async function uploadTask() {
     console.log(taskTitle.value);
   }
 }
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, "0");
+var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+var yyyy = today.getFullYear();
+
+today = dd + "/" + mm + "/" + yyyy;
 //✔ async function uploadTask() {
 //✔   const { data, error } = await supabase.from("tasks").insert([
 //     {
@@ -95,8 +104,8 @@ h2 {
   color: #9a9a9a;
 }
 .presentation {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 #createTask {

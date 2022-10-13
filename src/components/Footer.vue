@@ -45,4 +45,10 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+
+@media (max-width: 850px) {
+  #pie {
+    height: 20rem;
+  }
+}
 </style>

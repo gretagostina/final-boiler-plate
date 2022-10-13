@@ -18,12 +18,13 @@ DÍA SIETE: Hemos hecho el deployment en vercel. En mi caso hubieron algunos fal
 DÍA OCHO:
 He puesto el burger y lo hice responsive. He corregido un botón del taskitem. Y he corregido un input que no funcionaba correctamente al escribir textos largos. Y he aprovechado para añadir un texto descriptivo cuando se señala un botón en caso de que al usuario no le parezca lo suficientemente intuitivo.
 
+DÍA NUEVE:
+En el stand up Diego me ha acosenjado algunas cosas a mejorar y he podido corregir en su mayoría (como limpiar los inputs y modificar los tamaños de los contenidos, tales como el burger y el footer).
+He podido añadir la fecha en el home. He cambiado de color a la carta para que pueda diferenciarse de las otras una vez completadas. Y he modificado algún que otro diseño.
+
 ```sh
-PREVISIÓN DÍA NUEVE:
-·agregar un forgot password.
-·colocar fecha en el título del home.
-·Terminar de diseñar la app (colocar imágenes o argo asín).
-·completar diapositivas del proyecto.
+PREVISIÓN DÍA DIEZ:
+presentación
 ```
 
 -------0-------

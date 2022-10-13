@@ -1,5 +1,5 @@
 <template>
-  <div class="taskItem">
+  <div class="taskItem" v-bind:class="{ completed: taskData.is_complete }">
     <div class="title">
       <b>{{ taskData.title }}</b>
     </div>
@@ -84,13 +84,19 @@ function childUpdate() {
   emit("childUpdate", props.taskData);
 }
 
-function completeTask() {
+function completeTask(event) {
   props.taskData.is_complete = true;
   emit("childUpdate", props.taskData);
+  let current = event.target;
+  let taskItem = current.parentElement.parentElement.parentElement;
+  taskItem.classList.add("completed");
 }
-function uncompleteTask() {
+function uncompleteTask(event) {
   props.taskData.is_complete = false;
   emit("childUpdate", props.taskData);
+  let current = event.target;
+  let taskItem = current.parentElement.parentElement.parentElement;
+  taskItem.classList.remove("completed");
 }
 </script>
 
@@ -114,6 +120,9 @@ h2 {
   opacity: 1;
   -webkit-transition: opacity 1000ms linear;
   transition: opacity 1000ms linear;
+}
+.taskItem.completed {
+  background-color: #e1e1e1;
 }
 
 .taskItem li {
@@ -208,5 +217,8 @@ button span.edit-task {
 .description i {
   width: 360px;
   word-break: break-all;
+}
+#edit-title {
+  margin-bottom: 10px;
 }
 </style>

@@ -202,22 +202,22 @@ body {
   }
   .hamburger {
     display: flex;
+    background-color: #e1e1e1;
   }
   .menu-button-container {
     display: flex;
+    color: black;
   }
   .menu {
     position: absolute;
     top: 0;
-    margin-top: 90px;
-    left: 0;
+    margin-top: 120px;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     justify-content: center;
     align-items: center;
     max-width: 1280px;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    margin-left: -7px;
   }
   #menu-toggle ~ .menu li {
     height: 0;
@@ -234,7 +234,7 @@ body {
     padding-top: 0px;
   }
   #menu-toggle:checked ~ .menu li.signOut-mobile {
-    padding-top: 5px;
+    padding-top: 20px;
   }
   .menu > li {
     display: flex;
@@ -242,8 +242,8 @@ body {
     margin: 0;
     padding: 0.5em 0;
     width: 100%;
-    color: white;
-    background-color: #222;
+    color: grey;
+    background-color: #aeaeae;
   }
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
