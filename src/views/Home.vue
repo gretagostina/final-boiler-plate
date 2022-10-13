@@ -11,11 +11,12 @@
       @childDelete="deleteTask"
       @childUpdate="updateTask"
     />
+    <p id="totalTasks"></p>
   </div>
   <Footer />
 </template>
-
 <script setup>
+// Carga librerías
 import { ref } from "vue";
 import Nav from "./../components/Nav.vue";
 import Footer from "../components/Footer.vue";
@@ -25,7 +26,6 @@ import TaskItem from "../components/TaskItem.vue";
 
 // Template de funcion asyncronica
 // async function nombreDeFuncion() {}
-
 //declarar una variable en formato array para guardar tareas
 let tasks = ref([]);
 
@@ -35,6 +35,9 @@ let taskStore = useTaskStore();
 //vamos a hace una función para conseguir las tareas del supabase
 async function getTasks() {
   tasks.value = await taskStore.fetchTasks();
+  let totalTasks = tasks.value.length;
+  /* document.getElementById("totalTasks").innerHTML =
+    "Total tareas: " + totalTasks;*/
 }
 getTasks();
 
@@ -43,7 +46,7 @@ async function deleteTask(task) {
   await taskStore.deleteTask(task.id);
   getTasks();
 }
-
+// Actualizar tarea
 async function updateTask(task) {
   await taskStore.updateTask(
     task.id,

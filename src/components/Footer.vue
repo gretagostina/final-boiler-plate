@@ -22,7 +22,6 @@ footer {
   background-color: #e1e1e1;
 }
 #pie {
-  height: 12rem;
   justify-content: center;
   align-items: flex-end;
   padding-left: 30px;

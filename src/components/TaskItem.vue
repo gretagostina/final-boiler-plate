@@ -55,13 +55,7 @@ const emit = defineEmits(["childDelete", "childUpdate"]);
 const props = defineProps(["taskData"]);
 
 //creamos una función para pasarle nuestro evento particular (custom) al padre para poder habilitar el delete de una tarea en particular. Esto se hace mediante un emit.
-
 function childDelete(event) {
-  /*let current = event.target;
-  let taskCard = current.parentElement.parentElement.parentElement;
-  console.log(taskCard);
-  taskCard.style.opacity = "0";
-  setTimeout(() => taskCard.remove(), 1000);*/
   emit("childDelete", props.taskData);
 }
 //he creado un condicional que permite esconder o mostrar la seccion para actualizar los datos a través de un botón.
@@ -83,7 +77,7 @@ function childUpdate() {
     document.getElementById("edit-description").value;
   emit("childUpdate", props.taskData);
 }
-
+// Completar tarea
 function completeTask(event) {
   props.taskData.is_complete = true;
   emit("childUpdate", props.taskData);
@@ -91,6 +85,7 @@ function completeTask(event) {
   let taskItem = current.parentElement.parentElement.parentElement;
   taskItem.classList.add("completed");
 }
+// Restaurar tarea
 function uncompleteTask(event) {
   props.taskData.is_complete = false;
   emit("childUpdate", props.taskData);
@@ -101,9 +96,6 @@ function uncompleteTask(event) {
 </script>
 
 <style>
-/*li {
-  margin: 1rem 0rem;
-}*/
 .hide {
   display: none;
 }
