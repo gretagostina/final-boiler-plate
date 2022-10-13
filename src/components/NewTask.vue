@@ -16,11 +16,13 @@
         type="text"
         id="newTaskTitle"
         placeholder="add a task title"
+        onfocus="this.value=''"
       /><br /><br />
       <input
         v-model="taskDesc"
         type="text"
         id="newTaskDesc"
+        onfocus="this.value=''"
         placeholder="add a task description"
       /><br /><br />
     </div>
@@ -59,8 +61,6 @@ async function uploadTask() {
     try {
       await useTaskStore().addTask(taskTitle.value, taskDesc.value);
       childGetTasks();
-      document.getElementById("newTaskTitle").value = "";
-      document.getElementById("newTaskDesc").value = "";
     } catch (error) {
       errorMsg.value = error.message;
       setTimeout(() => {

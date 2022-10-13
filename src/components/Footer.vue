@@ -1,14 +1,12 @@
 <template>
   <footer>
-    <div id="pie" class="left-footer">
-      <h1>made by Greta© 2022 TaskApp. All rights reserved</h1>
-      <p>Ironhack st 56, 46352</p>
-      <p>Spain</p>
-    </div>
-    <div class="right-footer">
+    <div id="pie">
       <p>SERVICES</p>
       <p>ABOUT</p>
       <p>LEGAL</p>
+      <p>Ironhack st 56, 46352</p>
+      <p>Spain</p>
+      <h1>made by Greta© 2022 TaskApp. All rights reserved</h1>
     </div>
   </footer>
 </template>
@@ -17,14 +15,16 @@
 
 <style scoped>
 footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   background-color: #e1e1e1;
 }
 #pie {
   justify-content: center;
   align-items: flex-end;
   padding-left: 30px;
+  text-align: center;
+  padding-right: 30px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 #pie h1 {
   color: black;

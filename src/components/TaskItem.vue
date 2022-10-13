@@ -70,11 +70,7 @@ function showHideEdit(event) {
   }
 }
 //creamos una función que saca los recursos para poder actualizar una tarea que hay en el task.js.
-function childUpdate() {
-  props.taskData.title = document.getElementById("edit-title").value;
-  //Añado la descripción como un dato más para actualizar.
-  props.taskData.description =
-    document.getElementById("edit-description").value;
+function childUpdate(event) {
   emit("childUpdate", props.taskData);
 }
 // Completar tarea
