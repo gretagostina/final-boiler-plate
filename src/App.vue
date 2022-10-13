@@ -33,10 +33,6 @@ onMounted(async () => {
 </template>
 
 <style>
-@import url("http://fonts.googleapis.com/css?family=Lato:400,700");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;0,900;1,900&display=swa");
-
 html {
   font-family: "Lato";
   background-color: #fff47c;
